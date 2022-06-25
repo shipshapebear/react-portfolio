@@ -1,0 +1,87 @@
+#about {
+    position: relative;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    padding-top: 50px;
+    overflow: auto;
+
+    & .title {
+        color: var(--foreground);
+        text-align: center;
+    }
+
+    & .about-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 80em;
+        width: 100%;
+        padding: 25px;
+        margin: 0 auto;
+        flex-wrap: nowrap;
+        @media (max-width: 45em){
+            padding: 0 25px;
+            flex-wrap: wrap;
+        }
+
+        & > * + * {
+            margin-top: 20px;
+        }
+
+        & .story-wrapper{
+            width: 100%;
+            & h1 {
+                font-size: 2rem;
+                color: var(--primary);
+                & span {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    color: var(--foreground);
+                    
+                }
+            }
+
+            & .story-link {
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                color: var(--primary);
+            }
+           
+            & .tech-wrapper{
+                display: flex;
+                align-items: center;
+
+                & > * + * {
+                    margin-left: 10px;
+                }
+                & img {
+                    width: 100%;
+                    max-width: 40px;
+                    height: auto;
+                    cursor: pointer;
+                    &:hover{
+                        transition: all 0.3s ease-in;
+                        filter: grayscale(0);
+                    }
+                }
+            }
+        }
+
+        & .me-wrapper{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            & img{
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
