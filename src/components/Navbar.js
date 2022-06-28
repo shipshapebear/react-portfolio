@@ -53,7 +53,7 @@ const Navbar = () => {
           <Link to="/home" as={NavLink} className='logo-title'>Aaron</Link>
         
 
-          <div className="desktop-menu">
+         
             <ul>
               <li>
               <Link to="/home" as={NavLink}>Home</Link>
@@ -63,10 +63,7 @@ const Navbar = () => {
               </li>
           
             </ul>
-          </div>
-        </div>
-        <div className='desktop-socials-wrapper'>
-        <Socials className="desktop-socials"/>
+         
         </div>
         <div className="hamburger" onClick={() => menu()}>
           <span className="bar"></span>

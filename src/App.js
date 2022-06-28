@@ -4,14 +4,17 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
+import Socials2 from './components/Socials2';
 const Home = React.lazy(() => import("./components/Home"));
 const Contact = React.lazy(() => import("./components/Contact"));
 const Story = React.lazy(() => import("./components/Story"));
+
 function App() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div className="app-main">
         <Navbar />
+        <Socials2 className='sticky-socials'/>
         <Menu />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -19,7 +22,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/story" element={<Story />} />
         </Routes>
-        
+        <Footer />
       </div>
     </Suspense>
   );

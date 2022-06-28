@@ -21,6 +21,7 @@
     --sidebar-w2: 72px;
 
 }
+
 /**
 @media (prefers-color-scheme: dark){
     :root {
@@ -43,7 +44,7 @@
 
     }
 } **/
-  
+
 
 .darkmode {
     --dark: #18181b;
@@ -64,7 +65,8 @@
 }
 
 
-body, html {
+body,
+html {
     position: relative;
     background: var(--background);
     color: var(--foreground);
@@ -78,16 +80,19 @@ body, html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #e5e5f7;
-        opacity: 1;
-        background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
-        background-size: 100% 100%, 100% 100%;
-        background-position: 0 0, 0 0;
+    opacity: 1;
+    background-image: radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 100% 100%, 100% 100%;
+    background-position: 0 0, 0 0;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
-.btn{
+
+.btn {
     display: grid;
     place-items: center;
     text-transform: uppercase;
@@ -98,15 +103,17 @@ body, html {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     max-width: 100%;
-    
+
     height: auto;
     text-decoration: none;
+
     @media (max-width: 80em) {
         padding: 8px 16px;
         font-size: 0.75rem;
     }
-    
+
 }
+
 .btn-primary {
     background-color: var(--primary);
     color: var(--light);
@@ -114,12 +121,14 @@ body, html {
     &:hover {
         background-color: var(--primary-hover);
     }
+
     &:disabled {
         background-color: var(--primary-disabled);
         opacity: 90%;
         cursor: not-allowed;
     }
 }
+
 .btn-secondary {
     border: var(--primary) solid 2px;
     color: var(--primary);
@@ -130,9 +139,28 @@ body, html {
         color: var(--light);
     }
 }
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-hover)
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary)
+  }
 
 .app-main {
-
+    position: relative;
+    height: 100%;
 
     @import './home.scss';
     @import './navbar.scss';
@@ -145,5 +173,6 @@ body, html {
     @import './about.scss';
     @import './story.scss';
     @import './services.scss';
+    @import './socials2.scss';
 
 }

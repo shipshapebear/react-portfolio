@@ -1,91 +1,134 @@
-
-import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useRef, useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
-import Footer from './Footer';
-
+import { useForm } from "react-hook-form";
 const Contact = () => {
   const form = useRef();
   const recaptchaRef = React.createRef();
 
-  const [captcha, setCaptcha] = useState(false)
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
+  const [captcha, setCaptcha] = useState(false);
   const [sending, setSending] = useState(false);
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm({
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  });
+  const [mailer, setMailer] = useState(null);
+
+  const sendEmail = (data) => {
     setSending(true);
-    emailjs.sendForm('service_s2cq85j', 'template_u2ziegp', form.current, 'O34BDXb_u6UjV0rI1')
-      .then((result) => {
-        console.log(result.text);
-        setSending(false);
-        setCaptcha(false);
-        setName('');
-        setEmail('');
-        setMessage('');
-        setSubject('');
-      }, (error) => {
-        console.log(error.text);
-      });
+    emailjs
+      .sendForm(
+        "service_s2cq85j",
+        "template_u2ziegp",
+        form.current,
+        "O34BDXb_u6UjV0rI1"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSending(false);
+          setCaptcha(false);
+          window.grecaptcha.reset();
+          reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+      
   };
-
-  const onNameChange = (e) => {
-    e.preventDefault();
-    setName(e.target.value)
-  };
-
-  const onEmailChange = (e) => {
-    e.preventDefault();
-    setEmail(e.target.value)
-  }
-  const onSubjectChange = (e) => {
-    e.preventDefault();
-    setSubject(e.target.value)
-  }
-
-  const onMessageChange = (e) => {
-    e.preventDefault();
-    setMessage(e.target.value)
-  }
+  useEffect(() => {
+    // reset form with user data
+    reset(mailer);
+  }, [mailer]);
   return (
     <div id="contact">
-      <div className='contact-wrapper'>
-        <div className='form-wrapper'>
-          <form ref={form} onSubmit={sendEmail} className="form">
-            <h1>Contact Me</h1>
-            <div className='formGroup'>
-              <label htmlFor={'name'}>Name</label>
-              <input className="input" type="text" id={'name'} name="name" placeholder='Name' value={name} onChange={onNameChange} />
-            </div>
-            <div className='formGroup'>
-              <label htmlFor={'email'}>Email</label>
-              <input className="input" type="email" id={'email'} name="email" value={email} onChange={onEmailChange} placeholder='juandelacruz@email.com' />
-            </div>
-            <div className='formGroup'>
-              <label htmlFor={'subject'}>Subject</label>
-              <input className="input" type="text" id={'subject'} name="subject" value={subject} onChange={onSubjectChange} placeholder='Subject' />
-            </div>
-            <div className='formGroup'>
-              <label htmlFor={'message'}>Message</label>
-              <textarea name="message" id={'message'} value={message} onChange={onMessageChange} placeholder='Type your message here.' />
-            </div>
-            <div className='buttonGroup'>
-              <ReCAPTCHA
-                className='reCAPTCHA'
-                sitekey="6LfjtIsgAAAAACMI-WUI44eBVPx9GfCaim53kt--"
-                onChange={() => setCaptcha(captcha => !captcha)}
+      <div className="contact-wrapper">
+        <div className="form-wrapper">
+          <form ref={form} onSubmit={handleSubmit(sendEmail)} className="form">
+            <h1 className="title">Contact Me</h1>
+            <div className="formGroup">
+              <label htmlFor={"name"}>Name</label>
+              <input
+                className="input"
+                type="text"
+                id={"name"}
+                name="name"
+                placeholder="Name"
+                {...register("name", { required: true })}
               />
-              <button style={{ marginTop: "10px" }} disabled={!captcha} type="submit" className="btn-primary sendBtn" value="Send">{sending ? <div className='loader'></div> : 'SEND'}</button>
+            </div>
+            <div className="formGroup">
+              <label htmlFor={"email"}>Email</label>
+              <input
+                className="input"
+                type="email"
+                id={"email"}
+                name="email"
+                placeholder="juandelacruz@email.com"
+                {...register("email", { required: true })}
+              />
+            </div>
+            <div className="formGroup">
+              <label htmlFor={"subject"}>Subject</label>
+              <input
+                className="input"
+                type="text"
+                id={"subject"}
+                name="subject"
+                placeholder="Subject"
+                {...register("subject", { required: true })}
+              />
+            </div>
+            <div className="formGroup">
+              <label htmlFor={"message"}>Message</label>
+              <textarea
+                name="message"
+                id={"message"}
+                placeholder="Type your message here."
+                {...register("message", { required: true })}
+              />
+            </div>
+            <div className="buttonGroup">
+              <ReCAPTCHA
+                className="reCAPTCHA"
+                sitekey="6LfjtIsgAAAAACMI-WUI44eBVPx9GfCaim53kt--"
+                onChange={() => setCaptcha((captcha) => !captcha)}
+              />
+              <button
+                style={{ marginTop: "10px" }}
+                disabled={!captcha}
+                type="submit"
+                className="btn-primary sendBtn"
+                value="Send"
+              >
+                {sending ? <div className="loader"></div> : "SEND"}
+              </button>
             </div>
           </form>
         </div>
-        
+        <div className="right-wrapper">
+          <h1>Get in touch!</h1>
+          <p>
+            My inbox is always open. Either fill out the form with your inquiry
+            or send me an email at &nbsp;
+            <a className="email" href="mailto:aaronmlbnn@gmail.com">
+              aaromlbnn@gmail.com.
+            </a>
+          </p>
+        </div>
       </div>
-      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

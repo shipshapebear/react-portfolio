@@ -4,12 +4,12 @@ import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 const About = () => {
   return (
     <section id='about'>
-      <h1 className='title'>About Me</h1>
+ 
       <div className='about-wrapper'>
         <div className='story-wrapper'>
-          <h1><span>I am </span>Aaron Jay,</h1>
+        <h1 className='title'>About Me</h1>
           <p>
-          I specialize in Front-end web development
+           Hello! My name is Aaron Jay Malabanan and I specialize in Front-end web development
           and my passion is all about building attractive and professional
           user interfaces and websites.
           </p>

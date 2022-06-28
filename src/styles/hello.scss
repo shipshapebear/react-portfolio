@@ -2,72 +2,66 @@
     position: relative;
     width: 100%;
     height: auto;
-    padding-top: 100px;
     display: flex;
     justify-content: center;
     overflow: hidden;
 
 
-    .hello-wrapper {
+
+    & .hello-wrapper {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        flex-wrap: nowrap;
+        justify-content: center;
         width: 100%;
         height: 100%;
-        padding: 0 50px;
-        flex-wrap: no-wrap;
         overflow: hidden;
-        
+        margin: 0 auto;
+        min-height: 48em;
+        max-width: 80em;
+        padding: 25px;
         /**background-image: url(../images/hello-background.svg);
         background-position: 0 0, 0 0;
         background-repeat: no-repeat;
         background-size: cover;*/
-        
-        @media (max-width: 45em) {
-            flex-wrap: wrap-reverse;
-        }
-        @media (max-width: 80em){
-            padding: 0 25px;
-        }
+
        
-        .hero-left {
+        & .hero-left {
             display: flex;
             flex-direction: column;
-            max-width: 100%;
-            height: 100%;
             flex-grow: 1;
             margin: 0 auto;
             
           
-            span {
+            & span {
                 text-align: left;
-                font-size: 1.75rem;
-                text-transform: uppercase;
+                font-size: 1.25rem;
                 font-weight: 600;
                 margin: 0;
                 @media (max-width: 80em) {
                     font-size: 1rem;
                 }
             }
-            h1{
-                font-size: 3rem;
+            
+            & .name {
                 margin: 0;
-                @media (max-width: 80em) {
-                    font-size: 1.25rem;
-                }
-                span {
-                    font-size: 3rem;
-                    font-weight: 800;
-                    color: var(--primary);
-                    @media (max-width: 80em) {
-                        font-size: 1.5rem;
-                    }
-                }
+                font-size: clamp(40px, 8vw, 80px);
+                color: var(--primary);
+               
             }
-            p {
+
+            & .title {
+                margin: 0;
+                padding: 0;
+                font-size: clamp(28px, 5vw, 80px);
+                color: var(--primary-disabled);
+                opacity: 95%;
+                letter-spacing: -0.15rem;
+            }
+
+            & p {
                 opacity: 90%;
                 font-weight: 500;
+                max-width: 36em;
                 font-size: 1.25rem;
                 text-align: left;
                 line-height: 2rem;
@@ -90,24 +84,6 @@
                 }
             }
             
-        }
-    
-        .hero-right {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            margin-left: 60px;
-
-            @media (max-width: 80em) {
-                margin-left: 0;
-            }
-            img{
-                width: 100%;
-                max-width: 1100px;
-                height: auto;
-                margin: 0 auto;
-                filter: grayscale(46%);
-            }
         }
     }
 

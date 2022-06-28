@@ -11,8 +11,8 @@ const Footer = () => {
             <Link className='lets-talk' as={ NavLink } to="/contact">Lets Talk <HiOutlineArrowNarrowRight/></Link>
             </div>
             <div className="footer-bottom">
-            <p>&copy; <span>AARON JAY MALABANAN.</span> ALL RIGHTS RESERVED. 2022</p>
-            <Socials className="socials-footer"/>
+            <p>Designed and built by <span>AARON JAY MALABANAN.</span> &copy; 2022.</p>
+            <span>aaronmlbnn@gmail.com</span>
             </div>
             
 
