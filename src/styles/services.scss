@@ -16,12 +16,11 @@
         width: 100%;
         flex-wrap: nowrap;
         padding: 25px;
-        overflow: auto;
+        overflow: hidden;
         height: auto;
         
         @media (max-width: 80em) {
             flex-wrap: wrap;
-            
         }
         & :nth-child(3){
             margin-top: 0px;

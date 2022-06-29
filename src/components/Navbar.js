@@ -34,10 +34,8 @@ const Navbar = () => {
   const menuWrapper = document.querySelector(".menu-wrapper");
   const navParent = document.querySelector(".nav");
   const scroll = useScrollHandler();
-  let nav = ("nav")
   let navWrapper = ("nav-wrapper");
   if (scroll) {
-    nav += " nav-scrolled";
     if (menuWrapper.classList.contains("active")) {
       navParent.classList.add("hide-bg");
       console.log("active");
@@ -46,7 +44,7 @@ const Navbar = () => {
 
   return (
 
-    <nav className={nav}>
+    <nav className={`nav ${scroll ? 'nav-scrolled' : ''}`}>
       <div className={navWrapper}>
         <div className="logo-wrapper">
           {/*<img src={myLogo} alt="logo" />*/}

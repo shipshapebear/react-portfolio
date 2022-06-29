@@ -1,7 +1,5 @@
 #contact {
-    position: relative;
     height: 100%;
-    min-height: 100vh;
     width: 100%;
     max-width: 80em;
     display: flex;
@@ -9,9 +7,9 @@
     margin: 0 auto;
     overflow: hidden;
     & .contact-wrapper {
-        position: absolute;
+        position: relative;
         height: auto;
-        min-height: 100vh;
+        height: 100%;
         width: 100%;
         display: flex;
         margin: 0 auto;

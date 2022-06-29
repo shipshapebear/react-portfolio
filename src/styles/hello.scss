@@ -1,24 +1,25 @@
 #hello {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
-
-
 
     & .hello-wrapper {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 100%;
+        height: auto;
         overflow: hidden;
         margin: 0 auto;
         min-height: 48em;
         max-width: 80em;
-        padding: 25px;
+        padding: 0 25px;
+     
+        
         /**background-image: url(../images/hello-background.svg);
         background-position: 0 0, 0 0;
         background-repeat: no-repeat;
@@ -34,17 +35,14 @@
           
             & span {
                 text-align: left;
-                font-size: 1.25rem;
-                font-weight: 600;
+                font-size: var(--fz-xl);
+                font-weight: 800;
                 margin: 0;
-                @media (max-width: 80em) {
-                    font-size: 1rem;
-                }
             }
             
             & .name {
                 margin: 0;
-                font-size: clamp(40px, 8vw, 80px);
+                font-size: clamp(36px, 8vw, 60px);
                 color: var(--primary);
                
             }
@@ -52,23 +50,19 @@
             & .title {
                 margin: 0;
                 padding: 0;
-                font-size: clamp(28px, 5vw, 80px);
+                font-size: clamp(28px, 8vw, 60px);
                 color: var(--primary-disabled);
                 opacity: 95%;
-                letter-spacing: -0.15rem;
+              
             }
 
             & p {
                 opacity: 90%;
                 font-weight: 500;
                 max-width: 36em;
-                font-size: 1.25rem;
+                font-size: var(--fz-xl);
                 text-align: left;
-                line-height: 2rem;
-                @media (max-width: 80em) {
-                    font-size: 0.8rem;
-                    line-height: 1.25rem;
-                }
+                line-height: 1.5;
             }
 
             .hero-btn {

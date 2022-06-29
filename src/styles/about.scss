@@ -50,9 +50,7 @@
             margin-top: 20px;
         }
 
-        & p {
-            line-height: 1.5rem;
-        }
+      
         & .story-wrapper{
             width: 100%;
             & h1 {
@@ -65,7 +63,10 @@
                     
                 }
             }
-
+            & p {
+                font-size: var(--fz-xl);
+                line-height: 1.5;
+            }
             & .story-link {
                 text-decoration: none;
                 display: flex;

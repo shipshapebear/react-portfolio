@@ -20,6 +20,30 @@
     --sidebar-w: 280px;
     --sidebar-w2: 72px;
 
+    --fz-xxs: 12px;
+    --fz-xs: 13px;
+    --fz-sm: 14px;
+    --fz-md: 16px;
+    --fz-lg: 18px;
+    --fz-xl: 20px;
+    --fz-xxl: 22px;
+    --fz-heading: 32px;
+    --border-radius: 4px;
+    --nav-height: 100px;
+    --nav-scroll-height: 70px;
+    --tab-height: 42px;
+    --tab-width: 120px;
+
+        
+    @media (min-width: 40em) {
+        --fz-xxs: 8px;
+        --fz-xs: 10px;
+        --fz-sm: 12px;
+        --fz-md: 14px;
+        --fz-lg: 16px;
+        --fz-xl: 18px;
+        --fz-xxl: 20px;
+    }
 }
 
 /**
