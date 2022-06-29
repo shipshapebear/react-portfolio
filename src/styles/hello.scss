@@ -42,7 +42,7 @@
             
             & .name {
                 margin: 0;
-                font-size: clamp(40px, 8vw, 80px);
+                font-size: clamp(40px, 8vw, 72px);
                 color: var(--primary);
                
             }
@@ -50,9 +50,9 @@
             & .title {
                 margin: 0;
                 padding: 0;
-                font-size: clamp(40px, 8vw, 80px);
+                font-size: clamp(40px, 8vw, 72px);
                 color: var(--primary-dark);
-                opacity: 95%;
+           
               
             }
 
@@ -60,7 +60,7 @@
                 opacity: 90%;
                 font-weight: 500;
                 max-width: 36em;
-                font-size: var(--fz-xl);
+                font-size: var(--fz-lg);
                 text-align: left;
                 line-height: 1.5;
             }
