@@ -1,91 +1,20 @@
 footer {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     width: 100%;
-    height: 300px;
-    color: var(--light);
-    background-color: var(--dark);
+    color: var(--foreground);
     bottom: 0;
-    margin-bottom: 0;
     overflow: hidden;
 
     & .footer-wrapper {
         width: 100%;
         max-width: 80em;
-        padding: 0 25px;
-        text-align: start;
-        @media (max-width: 45em){
-            text-align: center;
-        }
-        & .footer-upper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 25px 0;
+        text-align: center;
+        margin: 0 auto;
 
-            & h3{
-                margin: 0;
-                padding: 0;
-                width: 100%;
-            }
-            & .lets-talk{
-                text-decoration: none;
-                color: var(--light);
-                width: 100%;
-                text-align: end;
-                padding: 10px 0;
-
-                @media (max-width: 45em){
-                    text-align: center;
-                }
-            }
-
-            @media (max-width: 45em) {
-                flex-wrap: wrap;
-                justify-content: center;
-                flex-grow: grow;
-            }
-           
-        }
-        & .footer-bottom{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: nowrap;
-            text-align: start;
-            border-top: 1px solid var(--light);
-            padding:  10px 0;
-
-            
-            & p{
-                margin: 0;
-                padding: 10px 0;
-                width: 100%;
-
-                & span {
-                    margin: 0;
-                    font-weight: 900;
-                    color: var(--primary);
-                }
-            }
-            @media (max-width: 45em) {
-                text-align: center;
-                justify-content: center;
-                flex-wrap: wrap-reverse;
-            }
-
-            .socials-footer {
-                width: 25px;
-                height: 25px;
-                text-decoration: none;
-                color: var(--primary);
-                &:hover {
-                    color: var(--primary);
-                }
-            }
-        
+        & p {
+            font-size: var(--fz-md);
+            font-weight: 600;
         }
     }
 }

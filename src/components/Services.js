@@ -7,7 +7,7 @@ import { FiPenTool } from 'react-icons/fi'
 const Services = () => {
   return (
     <section id="services">
-         <h2>What I do?</h2>
+         <h1>What I do?</h1>
         <div className='services-wrapper'>
            
             <div className='service-item'>

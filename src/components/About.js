@@ -27,7 +27,7 @@ const About = () => {
           </div>
         </div>
         <div className='me-wrapper'>
-        <img src={require("../images/Me.png")} alt="Me" />
+        <img src={require("../images/Me2.png")} alt="Me" />
         </div>
       </div>
     </section>

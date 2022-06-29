@@ -6,16 +6,7 @@ const Footer = () => {
   return (
     <footer>
         <div className='footer-wrapper'>
-            <div className='footer-upper'>
-            <h3>Aaron Jay Malabanan</h3>
-            <Link className='lets-talk' as={ NavLink } to="/contact">Lets Talk <HiOutlineArrowNarrowRight/></Link>
-            </div>
-            <div className="footer-bottom">
-            <p>Designed and built by <span>AARON JAY MALABANAN.</span> &copy; 2022.</p>
-            <span>aaronmlbnn@gmail.com</span>
-            </div>
-            
-
+            <p>Designed & Built by Aaron Jay Malabanan</p>
         </div>
     </footer>
   )

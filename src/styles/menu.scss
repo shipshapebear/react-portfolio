@@ -11,11 +11,11 @@
     width: 350px;
     transform: translateX(100%);
     transition: all 0.3s ease-in-out;
-    background-color: var(--light);
+    background-color: var(--background);
     z-index: 9;
     padding: 100px 0;
     overflow: hidden;
-    
+
     .wrapper-socs {
         display: flex;
         align-items: center;
@@ -23,7 +23,7 @@
         flex-direction: column;
         width: 100%;
         position: absolute;
-        bottom: 25px;
+        bottom: 100px;
         
         span {
             text-align: center;
@@ -35,7 +35,7 @@
     &.active{
         transform: translateX(0);
         overflow: hidden;
-        background-color: var(--light);
+        background-color: var(--services-background);
 
     }
     
