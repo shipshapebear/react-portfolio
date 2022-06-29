@@ -22,12 +22,12 @@
     --sidebar-w2: 72px;
 
     --fz-xxs: 12px;
-    --fz-xs: 14px;
-    --fz-sm: 16px;
-    --fz-md: 18px;
-    --fz-lg: 20px;
-    --fz-xl: 22px;
-    --fz-xxl: 24px;
+    --fz-xs: 13px;
+    --fz-sm: 14px;
+    --fz-md: 16px;
+    --fz-lg: 18px;
+    --fz-xl: 20px;
+    --fz-xxl: 22px;
     --fz-heading: 32px;
     --border-radius: 4px;
     --nav-height: 100px;
@@ -36,14 +36,14 @@
     --tab-width: 120px;
 
         
-    @media (min-width: 40em) {
-        --fz-xxs: 7px;
-        --fz-xs: 8px;
-        --fz-sm: 10px;
-        --fz-md: 12px;
-        --fz-lg: 14px;
-        --fz-xl: 16px;
-        --fz-xxl: 18px;
+    @media (max-width: 80em) {
+        --fz-xxs: 8px;
+        --fz-xs: 10px;
+        --fz-sm: 12px;
+        --fz-md: 14px;
+        --fz-lg: 16px;
+        --fz-xl: 18px;
+        --fz-xxl: 20px;
     }
 }
 
