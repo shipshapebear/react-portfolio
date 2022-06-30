@@ -18,12 +18,12 @@ const About = () => {
 
           <h2 style={{marginTop: "50px"}}>Technology Stack</h2>
           <div className='tech-wrapper'>
-          <img src={require("../images/stacks/sass-logo.png")} alt="Me" />
-          <img src={require("../images/stacks/bs-logo.png")} alt="Me" />
-          <img src={require("../images/stacks/tw-logo.png")} alt="Me" />
-          <img src={require("../images/stacks/js-logo.png")} alt="Me" />
-          <img src={require("../images/stacks/react.png")} alt="Me" />
-          <img src={require("../images/stacks/figma-logo.png")} alt="Me" />
+          <img src={require("../images/stacks/sass-logo.png")} alt="Sass" />
+          <img src={require("../images/stacks/bs-logo.png")} alt="Bootstrap" />
+          <img src={require("../images/stacks/tw-logo.png")} alt="Tailwind" />
+          <img src={require("../images/stacks/js-logo.png")} alt="Javascript" />
+          <img src={require("../images/stacks/react.png")} alt="React" />
+          <img src={require("../images/stacks/figma-logo.png")} alt="Figma" />
           </div>
         </div>
         <div className='me-wrapper'>
