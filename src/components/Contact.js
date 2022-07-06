@@ -12,7 +12,6 @@ const Contact = () => {
 
   useEffect(() => {
     getColorScheme()
-   
   }, [])
 
   const getColorScheme = () => {
