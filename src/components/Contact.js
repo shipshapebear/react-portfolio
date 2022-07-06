@@ -8,21 +8,21 @@ const Contact = () => {
   const grecaptcha = document.querySelector('.g-recaptcha')
   const [captcha, setCaptcha] = useState(false);
   const [sending, setSending] = useState(false);
-  const [isDark, setIsDark] = useState()
+  const [isDark, setIsDark] = useState(true)
 
   useEffect(() => {
-    getColorScheme()
-  }, [isDark])
-
-  const getColorScheme = () => {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setIsDark(true)
-    } else {
-      setIsDark(false)
+    const getColorScheme = () => {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        setIsDark(false)
+      } else {
+        setIsDark(true)
+      }
+      console.log(isDark)
     }
-    console.log(isDark)
-  }
+    getColorScheme()
+  }, [isDark, setIsDark])
 
+ 
   
 
   const {
