@@ -12,7 +12,7 @@ const Contact = () => {
 
   useEffect(() => {
     getColorScheme()
-  }, [])
+  }, [isDark])
 
   const getColorScheme = () => {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
