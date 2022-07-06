@@ -5,9 +5,27 @@ import { useForm } from "react-hook-form";
 const Contact = () => {
   const form = useRef();
   const recaptchaRef = React.createRef();
-
+  const grecaptcha = document.querySelector('.g-recaptcha')
   const [captcha, setCaptcha] = useState(false);
   const [sending, setSending] = useState(false);
+  const [isDark, setIsDark] = useState()
+
+  useEffect(() => {
+    getColorScheme()
+   
+  }, [])
+
+  const getColorScheme = () => {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setIsDark(true)
+    } else {
+      setIsDark(false)
+    }
+    console.log(isDark)
+  }
+
+  
+
   const {
     register,
     formState: { errors },
@@ -44,7 +62,7 @@ const Contact = () => {
           console.log(error.text);
         }
       );
-      
+
   };
   useEffect(() => {
     // reset form with user data
@@ -64,6 +82,7 @@ const Contact = () => {
                 id={"name"}
                 name="name"
                 placeholder="Name"
+                autoComplete="off"
                 {...register("name", { required: true })}
               />
             </div>
@@ -74,7 +93,8 @@ const Contact = () => {
                 type="email"
                 id={"email"}
                 name="email"
-                placeholder="juandelacruz@email.com"
+                autoComplete="off"
+                placeholder="johndoe@email.com"
                 {...register("email", { required: true })}
               />
             </div>
@@ -86,6 +106,7 @@ const Contact = () => {
                 id={"subject"}
                 name="subject"
                 placeholder="Subject"
+                autoComplete="off"
                 {...register("subject", { required: true })}
               />
             </div>
@@ -95,11 +116,13 @@ const Contact = () => {
                 name="message"
                 id={"message"}
                 placeholder="Type your message here."
+                autoComplete="off"
                 {...register("message", { required: true })}
               />
             </div>
             <div className="buttonGroup">
               <ReCAPTCHA
+                theme={isDark ?'dark' : 'light'}
                 className="reCAPTCHA"
                 sitekey="6LfjtIsgAAAAACMI-WUI44eBVPx9GfCaim53kt--"
                 onChange={() => setCaptcha((captcha) => !captcha)}
