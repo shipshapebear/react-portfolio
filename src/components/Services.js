@@ -13,7 +13,7 @@ const Services = () => {
             <li className='service-item'>
             <MdCode className='service-icon' />
                 <h3>Web Devlopment</h3>
-                <p>Delivering a elegant and </p>
+                <p>I do front end web development</p>
 
             </li>
             <li className='service-item'>
