@@ -209,8 +209,9 @@ textarea {
 }
 
 .sendBtn {
-    display: grid;
-    place-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 36px;
     max-width: 100px;
     width: 100%;
