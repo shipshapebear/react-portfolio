@@ -10,7 +10,7 @@ nav {
     padding: 50px 0;
     z-index: 10;
 
-    @media (max-width: 80em) {
+    @media screen and(max-width: 768px) {
         padding: 25px 0;
     }
 
@@ -33,7 +33,7 @@ nav {
             font-weight: 700;
             color: var(--foreground);
         }
-        @media (max-width: 45em) {
+        @media screen and(max-width: 768px) {
           justify-content: center;
         }
     }
@@ -46,7 +46,7 @@ nav {
       transition: all 0.3s ease-in-out; 
       -webkit-transition: all 0.3s ease-in-out;
       padding: 36px 0;
-      @media (max-width: 80em) {
+      @media screen and(max-width: 768px) {
         padding: 25px 0;
       }
       &.hide-bg{
@@ -63,7 +63,7 @@ nav {
         z-index: 1;
         background-color: transparent;
         padding: 0 50px;
-        @media (max-width: 80em) {
+        @media screen and(max-width: 768px) {
           justify-content: center;
           padding: 0 15px;
         }
@@ -73,7 +73,7 @@ nav {
             z-index: 2;
             display: none;
             
-            @media (max-width: 80em) {
+            @media screen and (max-width: 768px) {
                 display: block;
                 right: 15px;
             }
@@ -109,7 +109,7 @@ nav {
               margin-left: 1.5rem;
             }
 
-            @media (max-width: 80em){
+            @media screen and (max-width: 768px){
               display: none;
             }
             & a {

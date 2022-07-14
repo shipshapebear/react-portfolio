@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 const Contact = () => {
   const form = useRef();
   const recaptchaRef = React.createRef();
-  const grecaptcha = document.querySelector('.g-recaptcha')
+ 
   const [captcha, setCaptcha] = useState(false);
   const [sending, setSending] = useState(false);
   const [isDark, setIsDark] = useState(true)
@@ -14,11 +14,15 @@ const Contact = () => {
     const getColorScheme = () => {
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
         setIsDark(false)
+        
       } else {
         setIsDark(true)
+      
       }
       console.log(isDark)
+      
     }
+
     getColorScheme()
   }, [isDark, setIsDark])
 
@@ -74,6 +78,7 @@ const Contact = () => {
           <form ref={form} onSubmit={handleSubmit(sendEmail)} className="form">
             <h1 className="title">Contact Me</h1>
             <div className="formGroup">
+             
               <label htmlFor={"name"}>Name</label>
               <input
                 className="input"

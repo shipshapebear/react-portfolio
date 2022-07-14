@@ -36,7 +36,7 @@
     --tab-width: 120px;
 
         
-    @media (max-width: 80em) {
+    @media screen and (max-width: 768px) {
         --fz-xxs: 8px;
         --fz-xs: 10px;
         --fz-sm: 12px;
@@ -131,7 +131,7 @@ html {
     height: auto;
     text-decoration: none;
 
-    @media (max-width: 80em) {
+    @media screen and (max-width: 768px) {
         padding: 8px 16px;
         font-size: 0.75rem;
     }
