@@ -32,6 +32,10 @@ nav {
             font-size: 2rem;
             font-weight: 700;
             color: var(--foreground);
+
+            .bull {
+              color: var(--primary);
+            }
         }
         @media screen and(max-width: 768px) {
           justify-content: center;

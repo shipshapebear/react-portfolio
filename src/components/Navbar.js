@@ -48,7 +48,7 @@ const Navbar = () => {
       <div className={navWrapper}>
         <div className="logo-wrapper">
           {/*<img src={myLogo} alt="logo" />*/}
-          <Link to="/home" as={NavLink} className='logo-title'>Aaron</Link>
+          <Link to="/home" as={NavLink} className='logo-title'>Aaron Jay <span className='bull'>&bull;</span></Link>
         
 
          

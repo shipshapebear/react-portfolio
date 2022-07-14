@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useForm } from "react-hook-form";
+import Toaster from "../components/Toaster";
 const Contact = () => {
   const form = useRef();
   const recaptchaRef = React.createRef();
@@ -9,6 +10,7 @@ const Contact = () => {
   const [captcha, setCaptcha] = useState(false);
   const [sending, setSending] = useState(false);
   const [isDark, setIsDark] = useState(true)
+  const [messageStatus, setMessageStatus] = useState(null);
 
   useEffect(() => {
     const getColorScheme = () => {
@@ -60,12 +62,17 @@ const Contact = () => {
           setCaptcha(false);
           window.grecaptcha.reset();
           reset();
+          setMessageStatus("ok")
+          setTimeout(() => {
+            setMessageStatus('')
+          }, 3000)
         },
         (error) => {
           console.log(error.text);
+          setMessageStatus("failed")
         }
       );
-
+        
   };
   useEffect(() => {
     // reset form with user data
@@ -77,6 +84,7 @@ const Contact = () => {
         <div className="form-wrapper">
           <form ref={form} onSubmit={handleSubmit(sendEmail)} className="form">
             <h1 className="title">Contact Me</h1>
+            <div className="form-container">
             <div className="formGroup">
              
               <label htmlFor={"name"}>Name</label>
@@ -124,6 +132,7 @@ const Contact = () => {
                 {...register("message", { required: true })}
               />
             </div>
+           
             <div className="buttonGroup">
               <ReCAPTCHA
                 theme={isDark ?'dark' : 'light'}
@@ -141,8 +150,10 @@ const Contact = () => {
                 {sending ? <div className="loader"></div> : "SEND"}
               </button>
             </div>
+            </div>
           </form>
         </div>
+        
         <div className="right-wrapper">
           <h1>Get in touch!</h1>
           <p>
@@ -154,6 +165,9 @@ const Contact = () => {
           </p>
         </div>
       </div>
+      {messageStatus &&  <Toaster message={messageStatus}/>}
+
+     
     </div>
   );
 };

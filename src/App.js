@@ -5,9 +5,9 @@ import Navbar from "./components/Navbar";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import Socials2 from './components/Socials2';
-const Home = React.lazy(() => import("./components/Home"));
-const Contact = React.lazy(() => import("./components/Contact"));
-const Story = React.lazy(() => import("./components/Story"));
+const Home = React.lazy(() => import("./pages/Home"));
+const Contact = React.lazy(() => import("./pages/Contact"));
+const Story = React.lazy(() => import("./pages/Story"));
 
 function App() {
   return (

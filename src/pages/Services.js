@@ -13,7 +13,7 @@ const Services = () => {
                 <li className='service-item'>
                     <MdCode className='service-icon' />
                     <h3>Web Devlopment</h3>
-                    <p>I do front end web development and spends my time in personal projects and exploring APIs to visualize data into applications.
+                    <p>I do front end web development, spends my time in personal projects and exploring APIs to visualize data into applications.
                         My skills in styling components allows me to transfer a design into elegant looking and responsive web application.
 
                     </p>

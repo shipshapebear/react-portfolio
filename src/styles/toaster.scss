@@ -1,0 +1,33 @@
+
+    
+    .toaster-item{
+        cursor: default;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        max-width: 300px;
+        width: 100%;
+        color: var(--foreground);
+        background-color: var(--primary);
+        border-radius: 0 6px 6px 0;
+        transform: translateX(-100%);
+        transform: translateY(-50%);
+        margin-right: 25px;
+        text-align: center;
+        padding: 16px;
+        z-index: 20;
+        background-color: var(--services-background);
+
+        @media screen and (max-width: 820px) {
+            max-width: 220px;
+            padding: 12px;
+            
+         }
+        &.success {
+            border-left: 5px solid green;
+        }
+        &.failed {
+            border-right: 5px solid rgb(255, 83, 83);
+        }
+    }
+
