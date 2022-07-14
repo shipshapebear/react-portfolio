@@ -8,7 +8,7 @@ const Contact = () => {
   const recaptchaRef = React.createRef();
  
   const [captcha, setCaptcha] = useState(false);
-  const [sending, setSending] = useState(false);
+  const [sending, setSending] = useState(true);
   const [isDark, setIsDark] = useState(true)
   const [messageStatus, setMessageStatus] = useState(null);
 
@@ -72,7 +72,7 @@ const Contact = () => {
           setMessageStatus("failed")
         }
       );
-        
+
   };
   useEffect(() => {
     // reset form with user data
