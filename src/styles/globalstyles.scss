@@ -113,12 +113,7 @@ html {
 
     
 }
-@media screen and (max-width: 768px) {
-    body, html {
-        scroll-padding: calc(var(--nav-height) + 25px);
-    }
-    
-}
+
 *,
 *::before,
 *::after {
