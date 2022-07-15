@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Socials from './Socials';
-import myLogo from '../images/aaron-logo.svg';
 import { Link, NavLink } from 'react-router-dom';
 const menu = () => {
   const menuWrapper = document.querySelector(".menu-wrapper");
@@ -49,19 +47,28 @@ const Navbar = () => {
         <div className="logo-wrapper">
           {/*<img src={myLogo} alt="logo" />*/}
           <Link to="/" as={NavLink} className='logo-title'>Aaron Jay <span className='bull'>&bull;</span></Link>
-        
 
-         
-            <ul>
-              <li>
-              <Link to="/" as={NavLink}>Home</Link>
-              </li>
-              <li>
-                <Link to="/contact" as={NavLink}>Contact</Link>
-              </li>
-          
-            </ul>
-         
+
+
+          <ul>
+            <li>
+              <a href="#hello">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#services">Services</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+
+          </ul>
+
         </div>
         <div className="hamburger" onClick={() => menu()}>
           <span className="bar"></span>

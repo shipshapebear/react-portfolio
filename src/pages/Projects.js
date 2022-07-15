@@ -13,13 +13,13 @@ function Projects() {
 
   const Projects = [{
     id: 1,
-    projectName: "Spotify Connected Application",
+    projectName: "Spotify Connected App",
     image: [Spotify],
     description: "You can play tracks with lyrics if you have premium subscription and you can also view your saved tracks, recently played tracks, top artists, top tracks and more.",
     techonologies: [
       nodejs, sass, react
     ],
-    repositoryUrl: "",
+    repositoryUrl: "fsdfs",
     externalUrl: "https://intone-spotify.herokuapp.com"
   },
   {
@@ -30,7 +30,7 @@ function Projects() {
     techonologies: [
       php, javascript, bootstrap
     ],
-    repositoryUrl: "",
+    repositoryUrl: "asd",
     externalUrl: "http://agoncillo-rpt.online"
   }
 ]
@@ -40,24 +40,24 @@ function Projects() {
     <section id="projects">
       <h1>Recent Projects</h1>
 
-      {Projects && Projects.map((pr) => (
-        <div className='project-items'  key={pr.id}>
-          <img className="project-image" src={pr.image} alt='project-avatar' />
+      {Projects && Projects.map((project) => (
+        <div className='project-items'  key={project.id}>
+          <img className="project-image" src={project.image} alt='project-avatar' />
 
           <div className='project-description'>
-            <h2>{pr.projectName}</h2>
+            <h2>{project.projectName}</h2>
             <div className='project-information'>
-              <p>{pr.description}</p>
+              <p>{project.description}</p>
             </div>
             <div className='project-stacks'>
               <h4 className='technology'>Technologies used</h4>
               <div className='technologies-used'>
-                {pr.techonologies.map((tech) => (<img src={tech} alt='techs-used'/>))}
+                {project.techonologies.map((tech) => (<img src={tech} alt='techs-used'/>))}
               </div>
             </div>
             <div className='buttonGroup'>
-              <button className='btn btn-link'> <AiFillGithub /> Github</button>
-              <a href={pr.externalUrl} target="_blank" rel="noreferrer" className='btn btn-link'> <BiLinkExternal /> Visit</a>
+              <a href="#" className='btn btn-link'> <AiFillGithub /> Github</a >
+              <a href={project.externalUrl} target="_blank" rel="noreferrer" className='btn btn-link'> <BiLinkExternal /> Visit</a>
             </div>
 
           </div>

@@ -21,13 +21,13 @@
     --sidebar-w: 280px;
     --sidebar-w2: 72px;
 
-    --fz-xxs: 12px;
-    --fz-xs: 13px;
-    --fz-sm: 14px;
-    --fz-md: 16px;
-    --fz-lg: 18px;
-    --fz-xl: 20px;
-    --fz-xxl: 22px;
+    --fz-xxs: 11px;
+    --fz-xs: 12px;
+    --fz-sm: 13px;
+    --fz-md: 14px;
+    --fz-lg: 16px;
+    --fz-xl: 18px;
+    --fz-xxl: 20px;
     --fz-heading: 32px;
     --border-radius: 4px;
     --nav-height: 100px;
@@ -36,7 +36,7 @@
     --tab-width: 120px;
 
         
-    @media screen and (max-width: 768px) {
+    @media screen and (min-width: 768px) {
         --fz-xxs: 8px;
         --fz-xs: 10px;
         --fz-sm: 12px;
@@ -188,17 +188,18 @@ html {
     position: relative;
     height: 100%;
 
-    @import './home.scss';
-    @import './navbar.scss';
-    @import './hello.scss';
-    @import './contact.scss';
-    @import './menu.scss';
-    @import './socials.scss';
-    @import './projects.scss';
-    @import './footer.scss';
-    @import './about.scss';
-    @import './story.scss';
-    @import './services.scss';
-    @import './socials2.scss';
-    @import './toaster.scss';
 }
+
+
+@import './navbar.scss';
+@import './hello.scss';
+@import './contact.scss';
+@import './menu.scss';
+@import './socials.scss';
+@import './projects.scss';
+@import './footer.scss';
+@import './about.scss';
+@import './story.scss';
+@import './services.scss';
+@import './socials2.scss';
+@import './toaster.scss';

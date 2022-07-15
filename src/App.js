@@ -12,17 +12,13 @@ const Story = React.lazy(() => import("./pages/Story"));
 function App() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <main className="app-main">
-        <Navbar />
-        <Socials2 className='sticky-socials'/>
-        <Menu />
         <Routes>
           <Route path="/" element={<Layout />} />
+          <Route path="/home" element={<Layout />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/story" element={<Story />} />
         </Routes>
-        <Footer />
-      </main>
+
     </Suspense>
   );
 }

@@ -14,7 +14,7 @@ const Hello = () => {
           </p>
           <div className="hero-btn">
           <a href="../files/aaron-jay-resume.pdf" target="_blank" className='btn btn-primary'>VIEW RESUME</a>
-          <Link to="/contact" as={NavLink} className='btn btn-secondary'>CONTACT ME</Link>
+          <a href='#contact' className='btn btn-secondary'>CONTACT ME</a>
     
           </div>
         </div>

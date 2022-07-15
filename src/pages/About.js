@@ -14,7 +14,7 @@ const About = () => {
           user interfaces and websites.
           </p>
 
-          <Link className="story-link" to="/story" as={NavLink}>More of my story &nbsp; <HiOutlineArrowNarrowRight/></Link>
+          <Link className="story-link" to="#" as={NavLink}>More of my story &nbsp; <HiOutlineArrowNarrowRight/></Link>
 
           <h2 style={{marginTop: "50px"}}>Technology Stack</h2>
           <div className='tech-wrapper'>

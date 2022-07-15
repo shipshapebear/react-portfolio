@@ -21,8 +21,6 @@ const Contact = () => {
         setIsDark(true)
       
       }
-      console.log(isDark)
-      
     }
 
     getColorScheme()
@@ -44,8 +42,7 @@ const Contact = () => {
       message: "",
     },
   });
-  const [mailer, setMailer] = useState(null);
-
+ 
   const sendEmail = (data) => {
     setSending(true);
     emailjs
@@ -57,7 +54,6 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           setSending(false);
           setCaptcha(false);
           window.grecaptcha.reset();
@@ -74,12 +70,9 @@ const Contact = () => {
       );
 
   };
-  useEffect(() => {
-    // reset form with user data
-    reset(mailer);
-  }, [mailer]);
+ 
   return (
-    <div id="contact">
+    <section id="contact">
       <div className="contact-wrapper">
         <div className="form-wrapper">
           <form ref={form} onSubmit={handleSubmit(sendEmail)} className="form">
@@ -168,7 +161,7 @@ const Contact = () => {
       {messageStatus &&  <Toaster message={messageStatus}/>}
 
      
-    </div>
+    </section>
   );
 };
 

@@ -14,18 +14,24 @@ const Menu = () => {
     return (
         <div className='menu-wrapper'>
             <ul>
-                <li>
-                    <Link to="/home" as={NavLink} onClick={() => removeActive()}>
-                        Home
-                    </Link>
+            <li>
+              <a href="#hello">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#services">Services</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
 
-                </li>
-                <li>
-                <Link to="/contact" as={NavLink} onClick={() => removeActive()}>
-                        Contact
-                    </Link>
-                </li>
-            </ul>
+          </ul>
+
 
             <div className='wrapper-socs'>
                 <Socials className="mobile-socials" />
