@@ -1,8 +1,7 @@
 #projects {
     position: relative;
     width: 100%;
-    display: grid;
-    place-content: center;
+    display: block;
     min-height: 100vh;
     height: 100%;
     overflow: hidden;
@@ -25,7 +24,7 @@
     grid-gap: 20px;
     width: 100%;
     max-width: 72em;
-    margin-top: 34px;
+    margin: 34px auto;
 
     .project-image {
         max-width: 500px;
@@ -94,9 +93,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    #projects {
-        margin-top: 50px !important;
-    }
     .project-items {
         grid-template-columns: 1fr;
         background-color: var(--services-background);

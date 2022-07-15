@@ -114,7 +114,9 @@ html {
 
     
 }
-
+section {
+    padding-top: var(--nav-scrolled-height)
+}
 *,
 *::before,
 *::after {
