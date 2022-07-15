@@ -16,7 +16,7 @@ const About = () => {
 
           <Link className="story-link" to="#" as={NavLink}>More of my story &nbsp; <HiOutlineArrowNarrowRight/></Link>
 
-          <h2 style={{marginTop: "50px"}}>Technology Stack</h2>
+          <h4 style={{marginTop: "50px"}}>Technology Stack</h4>
           <div className='tech-wrapper'>
           <img src={require("../images/stacks/sass-logo.png")} alt="Sass" />
           <img src={require("../images/stacks/bs-logo.png")} alt="Bootstrap" />

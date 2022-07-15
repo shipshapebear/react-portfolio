@@ -29,24 +29,20 @@
     }
 
     & .about-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         max-width: 62em;
         width: 100%;
         margin: 0 auto;
         flex-wrap: nowrap;
-        gap: 80px;
+        grid-gap: 64px;
         padding: 0 25px;
         
-        @media (max-width: 45em){
+        @media screen and (max-width: 632px){
             padding: 0 25px;
-            flex-wrap: wrap;
+            grid-template-columns: 1fr;
         }
 
-        & > * + * {
-            margin-top: 20px;
-        }
 
       
         & .story-wrapper{
@@ -75,6 +71,7 @@
             & .tech-wrapper{
                 display: flex;
                 align-items: center;
+                margin-top: 10px;
 
                 & > * + * {
                     margin-left: 10px;
@@ -100,6 +97,7 @@
             justify-content: center;
             align-items: flex-start;
             position: relative;
+            margin: 0 auto;
            
             & .image-cover {
                 position: absolute;
@@ -110,6 +108,7 @@
                 background-color: var(--primary);
                 z-index: 3;
                 transition: all 0.2s ease-in-out;
+                inset: 0;
                 &:hover {
                     opacity: 0;
                 }
@@ -141,6 +140,7 @@
                 transition: all 0.3s ease;
                 
             }
+           
         }
     }
 }
