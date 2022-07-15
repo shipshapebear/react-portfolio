@@ -1,12 +1,10 @@
 .socials-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    right: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
 
     @media screen and(max-width: 768px) {
-        right: 15px;
+        
     }
         
     .desktop-socials {
