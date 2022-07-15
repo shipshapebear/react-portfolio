@@ -15,19 +15,19 @@ const Menu = () => {
         <div className='menu-wrapper'>
             <ul>
             <li>
-              <a href="#hello">Home</a>
+              <a href="#hello" onClick={() => removeActive()}>Home</a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="#about" onClick={() => removeActive()}>About</a>
             </li>
             <li>
-              <a href="#services">Services</a>
+              <a href="#services" onClick={() => removeActive()} >Services</a>
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <a href="#projects" onClick={() => removeActive()} >Projects</a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a href="#contact" onClick={() => removeActive()}>Contact</a>
             </li>
 
           </ul>
