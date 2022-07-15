@@ -8,7 +8,7 @@ import Projects from './Projects';
 import Footer from '../components/Footer';
 import About from './About';
 import Services from './Services'
-const Home = () => {
+const Layout = () => {
   useEffect(() => {
     document.title = "Aaron Jay Malabanan"
   }, []);
@@ -23,4 +23,4 @@ const Home = () => {
   )
 }
 
-export default Home 
+export default Layout
