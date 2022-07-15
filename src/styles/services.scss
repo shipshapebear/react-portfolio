@@ -94,6 +94,11 @@
            
         }
 
+
+        @media screen and (max-width: 768px) {
+            background-color: var(--services-background);
+            margin-top: 20px;
+        }
     }
 
 
