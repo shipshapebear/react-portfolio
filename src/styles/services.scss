@@ -1,13 +1,12 @@
 #services {
     position: relative;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
     overflow: hidden;
     
 
     & h1 {
+        text-align: center;
         font-size: clamp(1.5rem, 8vw, 2rem);
         color: var(--primary);
     }
@@ -19,6 +18,7 @@
         list-style: none;
         width: 100%;
         padding: 25px;
+        margin: 0 auto;
        
         
 
