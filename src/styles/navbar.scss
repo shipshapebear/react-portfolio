@@ -10,7 +10,7 @@ nav {
     z-index: 10;
 
     @media screen and (max-width: 768px) {
-      height: var(--nav-height);
+      height: var(--nav-scrolled-height);
     }
 
     
@@ -54,7 +54,8 @@ nav {
         background-color: transparent;
         backdrop-filter: none;
       }
-      
+     
+  
       
     } 
     .nav-wrapper {
