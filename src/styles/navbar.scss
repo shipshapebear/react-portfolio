@@ -9,7 +9,9 @@ nav {
     transition: all 0.3s ease-in-out; 
     z-index: 10;
 
-   
+    @media screen and (max-width: 768px) {
+      height: var(--nav-height);
+    }
 
     
     .logo-wrapper {
@@ -52,9 +54,7 @@ nav {
         background-color: transparent;
         backdrop-filter: none;
       }
-      @media screen and (max-width: 768px) {
-        height: var(--nav-height);
-      }
+      
       
     } 
     .nav-wrapper {
