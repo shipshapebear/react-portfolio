@@ -1,11 +1,12 @@
 #contact {
+    position: relative;
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
     display: grid;
     place-content: center;
     height: 100%;
-    
+    padding: 50px 0;
     
     & .contact-wrapper {
         width: 100%;
