@@ -104,7 +104,6 @@ html {
     padding: 0;
     font-weight: 400;
     scroll-behavior: smooth;
-    scroll-padding-top: calc(var(--nav-height) + 50px);
    
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -113,7 +112,9 @@ html {
 
     
 }
-
+section {
+    scroll-padding-top: 85px;
+}
 *,
 *::before,
 *::after {
