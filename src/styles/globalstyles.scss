@@ -30,13 +30,14 @@
     --fz-xxl: 20px;
     --fz-heading: 32px;
     --border-radius: 4px;
-    --nav-height: 60px;
-    --nav-scroll-height: 40px;
+    --nav-height: 84px;
+    --nav-scrolled-height: 64px;
     --tab-height: 42px;
     --tab-width: 120px;
+    --nav-padding: 50px 0;
 
         
-    @media screen and (min-width: 768px) {
+    @media screen and (max-width: 768px) {
         --fz-xxs: 8px;
         --fz-xs: 10px;
         --fz-sm: 12px;
@@ -44,6 +45,7 @@
         --fz-lg: 16px;
         --fz-xl: 18px;
         --fz-xxl: 20px;
+        --nav-padding: 25px 0;
     }
 }
 
@@ -104,7 +106,7 @@ html {
     padding: 0;
     font-weight: 400;
     scroll-behavior: smooth;
-   
+    scroll-padding-top: var(--nav-height);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -112,9 +114,7 @@ html {
 
     
 }
-section {
-    scroll-padding-top: 200px;
-}
+
 *,
 *::before,
 *::after {
