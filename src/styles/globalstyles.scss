@@ -110,9 +110,13 @@ html {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: var(--background)
+    background-color: var(--background);
+    transition: all 0.3s ease-in-out;
 
-    
+}
+body.disabled{
+    overflow: hidden;
+
 }
 section {
     padding: var(--nav-scrolled-height) 0px;

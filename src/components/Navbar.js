@@ -5,10 +5,12 @@ const menu = () => {
   const hamburger = document.querySelector('.hamburger');
   const navParent = document.querySelector(".nav");
   const logoWrapper = document.querySelector(".logo-wrapper");
+  const body = document.querySelector('body')
   hamburger.classList.toggle("active");
   menuWrapper.classList.toggle("active");
   navParent.classList.toggle("hide-bg");
   logoWrapper.classList.toggle("hidden");
+  body.classList.toggle('disabled')
 };
 
 export const useScrollHandler = () => {
@@ -32,11 +34,12 @@ const Navbar = () => {
   const menuWrapper = document.querySelector(".menu-wrapper");
   const navParent = document.querySelector(".nav");
   const scroll = useScrollHandler();
+
   let navWrapper = ("nav-wrapper");
   if (scroll) {
     if (menuWrapper.classList.contains("active")) {
       navParent.classList.add("hide-bg");
-      console.log("active");
+      
     }
   }
 
