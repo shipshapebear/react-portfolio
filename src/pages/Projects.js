@@ -39,7 +39,7 @@ function Projects() {
   return (
     <section id="projects">
       <h1>Recent Projects</h1>
-
+    
       {Projects && Projects.map((project) => (
         <div className='project-items'  key={project.id}>
           <img className="project-image" src={project.image} alt='project-avatar' />

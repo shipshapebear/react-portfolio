@@ -3,7 +3,7 @@
     width: 100%;
     display: block;
     overflow: hidden;
-    
+    scroll-padding-top: var(--nav-scrolled-height);
 
     & h1 {
         text-align: center;
