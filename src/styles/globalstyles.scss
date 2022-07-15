@@ -30,8 +30,8 @@
     --fz-xxl: 20px;
     --fz-heading: 32px;
     --border-radius: 4px;
-    --nav-height: 100px;
-    --nav-scroll-height: 70px;
+    --nav-height: 60px;
+    --nav-scroll-height: 40px;
     --tab-height: 42px;
     --tab-width: 120px;
 
@@ -104,14 +104,21 @@ html {
     padding: 0;
     font-weight: 400;
     scroll-behavior: smooth;
-    scroll-padding: 80px;
+    scroll-padding: calc(var(--nav-height) + 34px);
+   
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: var(--background)
 
+    
 }
-
+@media screen and (max-width: 768px) {
+    body, html {
+        scroll-padding: calc(var(--nav-height) + 20px);
+    }
+    
+}
 *,
 *::before,
 *::after {
