@@ -3,10 +3,12 @@ import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { ReactComponent as HelloBackground } from '../images/hello-background.svg'
 import Resume from '../document/aaronjaymalabanan.pdf'
+import Loader from '../components/Loader'
 const Hello = () => {
 
 
   return (
+  
     <section id="hello">
       <div className="hello-wrapper">
         <div className='hero-left'>
