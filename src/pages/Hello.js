@@ -1,7 +1,10 @@
 import React from 'react'
+
 import { Link, NavLink } from 'react-router-dom'
 import { ReactComponent as HelloBackground } from '../images/hello-background.svg'
+import Resume from '../document/aaronjaymalabanan.pdf'
 const Hello = () => {
+
 
   return (
     <section id="hello">
@@ -14,7 +17,8 @@ const Hello = () => {
             I am a passionate front-end web developer based in the Philippines. <b>Welcome to my portfolio!</b>
           </p>
           <div className="hero-btn">
-          <a href="src\files\aaron-jay-resume.pdf" onClick={() => window.location.href='src/files/aaron-jay-resume.pdf'} target="_blank" className='btn btn-primary'>VIEW RESUME</a>
+      
+          <a href={Resume} target='_blank' className='btn btn-primary'>VIEW RESUME</a>
           <a href='#contact' className='btn btn-secondary'>CONTACT ME</a>
     
           </div>
