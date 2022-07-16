@@ -121,6 +121,10 @@ body.disabled{
     z-index: -10;
 
 }
+html.disabled {
+    height: 100%;
+    overflow: hidden;
+}
 section {
     padding: var(--nav-scrolled-height) 0px;
 }

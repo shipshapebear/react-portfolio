@@ -6,11 +6,13 @@ const menu = () => {
   const navParent = document.querySelector(".nav");
   const logoWrapper = document.querySelector(".logo-wrapper");
   const body = document.querySelector('body')
+  const html = document.querySelector('html')
   hamburger.classList.toggle("active");
   menuWrapper.classList.toggle("active");
   navParent.classList.toggle("hide-bg");
   logoWrapper.classList.toggle("hidden");
   body.classList.toggle('disabled')
+  html.classList.toggle('html')
 };
 
 export const useScrollHandler = () => {
