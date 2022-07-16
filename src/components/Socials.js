@@ -7,10 +7,10 @@ const Socials = ({className}) => {
   return (
     <IconContext.Provider value={{ className: className }}>
     <div className="socials-wrapper">
-        <a href="http://www.facebook.com"><AiFillFacebook/></a>
-        <a href="http://www.instagram.com"><AiFillInstagram/></a>
-        <a href="http://www.linkedin.com"><AiFillLinkedin/></a>
-        <a href="http://www.github.com"><AiFillGithub /></a>
+        <a target="_blank" rel="noreferrer" href="http://www.facebook.com"><AiFillFacebook/></a>
+        <a target="_blank" rel="noreferrer" href="http://www.instagram.com"><AiFillInstagram/></a>
+        <a target="_blank" rel="noreferrer" href="http://www.linkedin.com"><AiFillLinkedin/></a>
+        <a target="_blank" rel="noreferrer" href="http://www.github.com"><AiFillGithub /></a>
     </div>
     </IconContext.Provider>
   )

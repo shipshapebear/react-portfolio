@@ -151,9 +151,9 @@ const Contact = () => {
           <h1>Get in touch!</h1>
           <p>
             My inbox is always open. Either fill out the form with your inquiry
-            or send me an email at &nbsp;
+            or send me an email&nbsp;
             <a className="email" href="mailto:aaronmlbnn@gmail.com">
-              aaromlbnn@gmail.com.
+              here.
             </a>
           </p>
         </div>

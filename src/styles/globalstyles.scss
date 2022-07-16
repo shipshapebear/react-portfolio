@@ -30,8 +30,8 @@
     --fz-xxl: 20px;
     --fz-heading: 32px;
     --border-radius: 4px;
-    --nav-height: 84px;
-    --nav-scrolled-height: 64px;
+    --nav-height: 96px;
+    --nav-scrolled-height: 72px;
     --tab-height: 42px;
     --tab-width: 120px;
     --nav-padding: 50px 0;
@@ -46,6 +46,7 @@
         --fz-xl: 18px;
         --fz-xxl: 20px;
         --nav-padding: 25px 0;
+        --nav-scrolled-height: 64px;
     }
 }
 
@@ -118,7 +119,7 @@ html {
 
 
 section {
-    padding: var(--nav-scrolled-height) 0px;
+    padding: calc(var(--nav-scrolled-height) + 24px) 0px;
 }
 *,
 *::before,

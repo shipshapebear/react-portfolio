@@ -17,9 +17,20 @@ function Projects() {
     image: [Spotify],
     description: "You can play tracks with lyrics if you have premium subscription and you can also view your saved tracks, recently played tracks, top artists, top tracks and more.",
     techonologies: [
-      nodejs, sass, react
+      {
+        technologyName: 'NodeJS',
+        techonologyImage: [nodejs]
+      },
+      {
+        technologyName: 'Sass',
+        techonologyImage: [sass],
+      },
+      {
+        technologyName: 'React',
+        techonologyImage: [react]
+      }
     ],
-    repositoryUrl: "fsdfs",
+    repositoryUrl: "https://github.com/aaronmlbnn23/spotify-app",
     externalUrl: "https://intone-spotify.herokuapp.com"
   },
   {
@@ -28,20 +39,31 @@ function Projects() {
     image: [RPT],
     description: "An application used to manage and monitor real property tax. This application uses datatable to visualize data of real properties and uses ajax to perform CRUD operations. ",
     techonologies: [
-      php, javascript, bootstrap
+      {
+        technologyName: 'PHP',
+        techonologyImage: [php]
+      },
+      {
+        technologyName: 'Javasript',
+        techonologyImage: [javascript],
+      },
+      {
+        technologyName: 'Bootstrap',
+        techonologyImage: [bootstrap]
+      }
     ],
-    repositoryUrl: "asd",
+    repositoryUrl: "",
     externalUrl: "http://agoncillo-rpt.online"
   }
-]
+  ]
 
 
   return (
     <section id="projects">
       <h1>Recent Projects</h1>
-    
+
       {Projects && Projects.map((project) => (
-        <div className='project-items'  key={project.id}>
+        <div className='project-items' key={project.id}>
           <img className="project-image" src={project.image} alt='project-avatar' />
 
           <div className='project-description'>
@@ -51,18 +73,23 @@ function Projects() {
             </div>
             <div className='project-stacks'>
               <h4 className='technology'>Technologies used</h4>
-              <div className='technologies-used'>
-                {project.techonologies.map((tech) => (<img src={tech} alt='techs-used'/>))}
-              </div>
+              <ul className='technologies-used'>
+                {project.techonologies.map((tech) => (
+                  <li>
+                    <img src={tech.techonologyImage} alt='techs-used' />
+                    <label className='tooltip'>{tech.technologyName}</label>
+                  </li>
+                ))}
+              </ul>
             </div>
             <div className='buttonGroup'>
-              <a href="#" className='btn btn-link'> <AiFillGithub /> Github</a >
+              {project.repositoryUrl != "" ? <a href={project.repositoryUrl} target="_blank" rel="noreferrer" className='btn btn-link'> <AiFillGithub />Github</a> : ''}
               <a href={project.externalUrl} target="_blank" rel="noreferrer" className='btn btn-link'> <BiLinkExternal /> Visit</a>
             </div>
 
           </div>
         </div>
-        ))}
+      ))}
 
     </section>
   )

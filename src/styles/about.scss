@@ -69,24 +69,52 @@
             }
            
             & .tech-wrapper{
-                display: flex;
-                align-items: center;
+                display: grid;
+                grid-template-columns: repeat(6, 40px);
                 margin-top: 10px;
+                list-style: none;
+                padding: 0;
+                grid-gap: 10px;
+                place-items: center;
+                
+             
 
-                & > * + * {
-                    margin-left: 10px;
+                & li {
+                    position: relative;
+
+                    .tooltip {
+                        position: absolute;
+                        background-color: var(--foreground);
+                        color: var(--background);
+                        padding: 3px 6px;
+                        display: none;
+                        font-weight: 500;
+                        font-size: var(--fz-xxs);
+                        border-radius: 3px;
+                    }
+                    &:hover > .tooltip {
+                        display: block;
+                    }
                 }
-                & img {
+               
+              
+                & .tech-image {
+                    position: relative;
                     width: 100%;
                     max-width: 40px;
                     height: auto;
-                    cursor: pointer;
+                    cursor: default;
+                    filter: grayscale(100%);
 
                     &:hover{
-                        transition: all 0.3s ease-in;
+                        transition: all 0.2s ease-in-out;
                         filter: grayscale(0);
+
+                        
                     }
+                    
                 }
+
             }
         }
 
@@ -98,6 +126,7 @@
             align-items: flex-start;
             position: relative;
             margin: 0 auto;
+            height: 300px;
            
             & .image-cover {
                 position: absolute;
