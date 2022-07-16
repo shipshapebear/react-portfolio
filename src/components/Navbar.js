@@ -12,7 +12,7 @@ const menu = () => {
   navParent.classList.toggle("hide-bg");
   logoWrapper.classList.toggle("hidden");
   body.classList.toggle('disabled')
-  html.classList.toggle('html')
+  html.classList.toggle('disabled')
 };
 
 export const useScrollHandler = () => {
