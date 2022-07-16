@@ -58,8 +58,8 @@
                     width: auto;
                     max-height: 25px;
                     height: 100%;
-                    margin-right: 10px;
                     filter: grayscale(100%);
+                    margin-right: 10px;
                     transition: all 0.2s ease-in-out;
                     &:hover {
                         filter: grayscale(0);
@@ -75,6 +75,7 @@
                     font-weight: 500;
                     font-size: var(--fz-xxs);
                     border-radius: 3px;
+                    height: auto;
                 }
 
                 &:hover > .tooltip {
