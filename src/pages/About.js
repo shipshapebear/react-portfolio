@@ -13,42 +13,14 @@ const About = () => {
             and my passion is all about building attractive and professional
             user interfaces and websites.
           </p>
+          <p>
+            My goal is to continuously enhance my knowledge and 
+            learn new things. I am focusing on front end development since 
+            I feel that this career path fits me extremely well.
+          </p>
 
           <Link className="story-link" to="#" as={NavLink}>More of my story &nbsp; <HiOutlineArrowNarrowRight /></Link>
 
-          <h4 style={{ marginTop: "50px" }}>Technology Stack</h4>
-          <ul className='tech-wrapper'>
-            <li>
-              <img className='tech-image' src={require("../images/stacks/sass-logo.png")} alt="Sass"  />
-              <label className='tooltip'>Sass</label>
-            </li>
-            <li>
-              <img className='tech-image' src={require("../images/stacks/bs-logo.png")} alt="Bootstrap"  />
-              <label className='tooltip'>Bootstrap</label>
-            </li>
-            <li>
-              <img className='tech-image' src={require("../images/stacks/tw-logo.png")} alt="Tailwind"  />
-              <label className='tooltip'>Tailwind</label>
-            </li>
-            <li>
-              <img className='tech-image' src={require("../images/stacks/js-logo.png")} alt="Javascript"  />
-              <label className='tooltip'>Javascript</label>
-            </li>
-            <li>
-              <img className='tech-image' src={require("../images/stacks/react.png")} alt="React"  />
-              <label className='tooltip'>ReactJS</label>
-            </li>
-            <li>
-              <img className='tech-image' src={require("../images/stacks/figma-logo.png")} alt="Figma"  />
-              <label className='tooltip'>Figma</label>
-            </li>
-
-
-
-
-
-
-          </ul>
         </div>
         <div className='me-wrapper'>
           <div className='image-cover'></div>

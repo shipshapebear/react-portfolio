@@ -18,8 +18,8 @@
     width: 50px;
     border: 5px solid var(--primary);
     border-radius: 50%;
-    border-top-color: var(--light);
-    border-bottom-color: var(--light);
+    border-top-color: var(--foreground);
+    border-bottom-color: var(--foreground);
     animation: spin 1s infinite;
 
     @media screen and (max-width: 768px) {

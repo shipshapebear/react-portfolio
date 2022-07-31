@@ -1,0 +1,120 @@
+.technology-wrapper {
+    width: 100%;
+    max-width: 72em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        text-align: start;
+        position: relative;
+        cursor: default;
+        font-size: clamp(1.5rem, 8vw, 2.5rem);
+        color: var(--primary);
+        margin-bottom: 20px;
+    }
+
+    .stack-container {
+
+
+    }
+
+    .stack-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        transition: all 0.5s ease;
+
+        &:hover {
+            transform: translateX(50px);
+        }
+
+
+        .stack-label {
+            position: relative;
+            color: var(--primary);
+            transition: all 0.5s ease;
+            cursor: pointer;
+            margin-left: 100px;
+        }
+
+       
+
+        &:nth-child(1) {
+            z-index: 6;
+        }
+
+        &:nth-child(2) {
+            margin-top: -60px;
+            z-index: 5;
+        }
+
+        &:nth-child(3) {
+            margin-top: -60px;
+            z-index: 4;
+        }
+
+        &:nth-child(4) {
+            margin-top: -60px;
+            z-index: 3;
+        }
+
+        &:nth-child(5) {
+            margin-top: -60px;
+            z-index: 2;
+        }
+
+        &:nth-child(6) {
+            margin-top: -60px;
+            z-index: 1;
+        }
+
+        .stack-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            width: 150;
+            height: 150px;
+            background-color: var(--primary);
+            transition: all 0.5s ease;
+            transform: rotateX(55deg) rotateZ(45deg);
+            
+
+       
+
+            &::after {
+                content: '';
+                height: 8px;
+                width: 100%;
+                background-color: var(--primary-dark);
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transform: skewX(45deg) translateY(100%) translateX(-4px);
+            }
+
+            &::before {
+                content: '';
+                height: 100%;
+                width: 8px;
+                background-color: var(--primary-dark);
+                position: absolute;
+                right: 0;
+                transform: translateX(100%) skewY(45deg) translateY(4px);
+            }
+            .stack-image {
+                width: 100px;
+                height: auto;
+            }
+
+        }
+
+    }
+
+
+
+}

@@ -11,6 +11,7 @@ import Footer from '../components/Footer';
 import About from './About';
 import Services from './Services'
 import Socials2 from '../components/Socials2';
+import Technology from './Technology';
 
 const Layout = () => {
   useEffect(() => {
@@ -24,9 +25,11 @@ const Layout = () => {
       <Menu />
       <Hello />
       <About />
+      <Technology />
       <Services />
       <Projects />
       <Contact />
+      
     </main>
     <footer>
       <Footer />
