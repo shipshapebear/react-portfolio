@@ -7,10 +7,10 @@ const Socials2 = ({className}) => {
   return (
     <IconContext.Provider value={{ className: className }}>
     <div className="fixed-socials">
-        <a target="_blank" rel="noreferrer" href="http://www.facebook.com"><AiFillFacebook/></a>
-        <a target="_blank" rel="noreferrer" href="http://www.instagram.com"><AiFillInstagram/></a>
-        <a target="_blank" rel="noreferrer" href="http://www.linkedin.com"><AiFillLinkedin/></a>
-        <a target="_blank" rel="noreferrer" href="http://www.github.com" style={{marginBottom: '30px'}}><AiFillGithub /></a>
+        <a target="_blank" rel="noreferrer" href="http://www.facebook.com/aaronmlbnn"><AiFillFacebook/></a>
+        <a target="_blank" rel="noreferrer" href="http://www.instagram.com/corp.aaronjay"><AiFillInstagram/></a>
+        <a target="_blank" rel="noreferrer" href="http://www.linkedin.com/malabanan.aaronjay"><AiFillLinkedin/></a>
+        <a target="_blank" rel="noreferrer" href="http://www.github.com/aaronmlbnn23" style={{marginBottom: '30px'}}><AiFillGithub /></a>
     </div>
     </IconContext.Provider>
   )
