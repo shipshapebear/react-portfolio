@@ -152,7 +152,7 @@ const Contact = () => {
           <p>
             My inbox is always open. Either fill out the form with your inquiry
             or send me an email&nbsp;
-            <a className="email" href="mailto:aaronmlbnn@gmail.com">
+            <a className="email" href="#">
               here.
             </a>
           </p>
