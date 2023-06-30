@@ -39,6 +39,13 @@
         grid-gap: 64px;
         padding: 0 25px;
 
+        .about-profile {
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            object-position: 0 5%;
+        }
+
         @media screen and (max-width: 632px) {
             padding: 0 25px;
             grid-template-columns: 1fr;

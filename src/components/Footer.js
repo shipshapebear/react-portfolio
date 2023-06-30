@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer>
         <div className='footer-wrapper'>
-            <p>Designed & Built by Aaron Jay Malabanan</p>
+            <p>Designed & Built by Aaron Jay</p>
         </div>
     </footer>
   )

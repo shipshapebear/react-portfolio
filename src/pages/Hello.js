@@ -20,7 +20,7 @@ const Hello = () => {
           </p>
           <div className="hero-btn">
       
-          <a href={Resume} target='_blank' className='btn btn-primary'>VIEW RESUME</a>
+          <a href="#" className='btn btn-primary'>VIEW RESUME</a>
           <a href='#contact' className='btn btn-secondary'>CONTACT ME</a>
     
           </div>

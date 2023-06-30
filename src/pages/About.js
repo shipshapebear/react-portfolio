@@ -9,7 +9,7 @@ const About = () => {
         <div className='story-wrapper'>
           <h1 className='title'>About Me</h1>
           <p>
-            Hello! My name is Aaron Jay Malabanan and I specialize in Front-end web development
+            Hello! My name is Aaron Jay and I specialize in Front-end web development
             and my passion is all about building attractive and professional
             user interfaces and websites.
           </p>
@@ -24,7 +24,7 @@ const About = () => {
         </div>
         <div className='me-wrapper'>
           <div className='image-cover'></div>
-          <img src={require("../images/Me2.png")} alt="Me" />
+          <img className="about-profile" src={require("../images/gradpic.jpg")} alt="Me" />
         </div>
       </div>
     </section>
